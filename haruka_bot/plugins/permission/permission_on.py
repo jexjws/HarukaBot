@@ -14,6 +14,7 @@ permission_on = on_command(
     rule=to_me(),
     permission=GROUP_OWNER | GROUP_ADMIN | SUPERUSER | GUILD_ADMIN,
     priority=5,
+    block=True
 )
 permission_on.__doc__ = """开启权限"""
 

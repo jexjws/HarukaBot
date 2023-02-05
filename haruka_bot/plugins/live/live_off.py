@@ -5,7 +5,7 @@ from nonebot.params import ArgPlainText
 from ...database import DB as db
 from ...utils import get_type_id, handle_uid, permission_check, to_me, uid_check
 
-live_off = on_command("关闭直播", rule=to_me(), priority=5)
+live_off = on_command("关闭直播", rule=to_me(), priority=5, block=True)
 live_off.__doc__ = """关闭直播 UID"""
 
 live_off.handle()(permission_check)

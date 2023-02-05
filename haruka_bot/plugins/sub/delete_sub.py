@@ -5,7 +5,7 @@ from nonebot.params import ArgPlainText
 from ...database import DB as db
 from ...utils import get_type_id, handle_uid, permission_check, to_me, uid_check
 
-delete_sub = on_command("取关", aliases={"删除主播"}, rule=to_me(), priority=5)
+delete_sub = on_command("取关", aliases={"删除主播"}, rule=to_me(), priority=5, block=True)
 delete_sub.__doc__ = """取关 UID"""
 
 delete_sub.handle()(permission_check)

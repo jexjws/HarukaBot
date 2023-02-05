@@ -5,7 +5,7 @@ from nonebot.params import ArgPlainText
 from ...database import DB as db
 from ...utils import get_type_id, handle_uid, permission_check, to_me, uid_check
 
-dynamic_on = on_command("开启动态", rule=to_me(), priority=5)
+dynamic_on = on_command("开启动态", rule=to_me(), priority=5, block=True)
 dynamic_on.__doc__ = """开启动态 UID"""
 
 dynamic_on.handle()(permission_check)

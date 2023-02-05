@@ -16,6 +16,7 @@ at_off = on_command(
     rule=to_me(),
     permission=GROUP_OWNER | GROUP_ADMIN | SUPERUSER | GUILD_ADMIN,
     priority=5,
+    block=True
 )
 at_off.__doc__ = """关闭全体 UID"""
 
